@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/place_order_phone"
+    android:layout_width="match_parent"
+    tools:viewBindingIgnore="true"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PlaceOrder">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/foodView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+
+                app:srcCompat="@drawable/friedchicken" />
+
+            <TextView
+                android:id="@+id/foodname_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="Fried Chicken"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="#C5BCBC"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/minus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="118dp"
+                    android:src="@drawable/ic_baseline_remove_circle_24" />
+
+
+                <TextView
+                    android:id="@+id/quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="1" />
+
+                <ImageView
+                    android:id="@+id/add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:src="@drawable/ic_baseline_add_circle_24" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        tools:ignore="ExtraText">
+
+
+        <EditText
+            android:id="@+id/place_order_name"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="6dp"
+            android:inputType="textPersonName"
+            android:gravity="center"
+            android:background="@drawable/edt_background"
+            android:hint="Enter Your Name" />
+
+        <EditText
+            android:id="@+id/phone_order"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="6dp"
+            android:gravity="center"
+            android:background="@drawable/edt_background"
+            android:hint="@string/enter_phone_number"
+            android:inputType="phone" />
+
+        <TextView
+            android:id="@+id/pricetext_place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/pink"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_marginTop="25dp"
+            android:text="Price" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <TextView
+                android:id="@+id/price_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="125dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="540"
+                android:textColor="@color/pink"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/button_placeorder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="85dp"
+                android:background="@drawable/corner_placeorderbtn"
+                android:layout_margin="5dp"
+                android:text="Place Order" />
+
+            <ImageView
+                android:id="@+id/showshopping"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/button_placeorder"
+                android:layout_marginStart="145dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_baseline_shopping_bag_24" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
